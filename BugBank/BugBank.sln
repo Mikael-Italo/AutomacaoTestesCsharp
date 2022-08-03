@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugBank", "BugBank\BugBank.csproj", "{989B7069-9CEC-492A-9B7D-765CBACE3599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{989B7069-9CEC-492A-9B7D-765CBACE3599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989B7069-9CEC-492A-9B7D-765CBACE3599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989B7069-9CEC-492A-9B7D-765CBACE3599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989B7069-9CEC-492A-9B7D-765CBACE3599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0867AFFB-D92D-4DEF-A375-F126C258688D}
+	EndGlobalSection
+EndGlobal
