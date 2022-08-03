@@ -27,8 +27,10 @@ namespace ST01Login
         [SetUp]
         public void SetUp()
         {
-            //driver = Utils.getBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);
-            driver = Utils.getBrowserRemote(driver, "http://127.0.0.1:4444/wd/hub");
+            //driver = Utils.getBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]); //Rodar local
+            //driver = Utils.getBrowserRemote(driver); //Rodar remote com GRID (Firefox)
+            driver = Utils.getBrowserMobile(driver); //Rodar mobile
+
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             driver.Navigate().GoToUrl("https://www.saucedemo.com/");
 

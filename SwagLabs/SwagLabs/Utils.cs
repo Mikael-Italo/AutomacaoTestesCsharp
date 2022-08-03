@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
@@ -40,15 +41,24 @@ namespace SwagLabs
         }
 
 
-        public static IWebDriver getBrowserRemote(IWebDriver driver, String uri)
+        public static IWebDriver getBrowserRemote(IWebDriver driver)
         {
             FirefoxOptions cap_firefox = new FirefoxOptions();
             //ChromeOptions cap_chrome = new ChromeOptions();
-            driver = new RemoteWebDriver(new Uri(uri), cap_firefox);
+            driver = new RemoteWebDriver(new Uri("http://127.0.0.1:4444/wd/hub"), cap_firefox);
 
             return driver;
         }
 
+        public static IWebDriver getBrowserMobile(IWebDriver driver)
+        {
+            DesiredCapabilities cap_android= new DesiredCapabilities();
+            cap_android.SetCapability("deviceName","emulator-5554");
+            cap_android.SetCapability("browserName", "Chrome");
+            driver = new AndroidDriver<IWebElement>(new Uri("http://localhost:4723/wd/hub"), cap_android);
+
+            return driver;
+        }
         #endregion
 
 
