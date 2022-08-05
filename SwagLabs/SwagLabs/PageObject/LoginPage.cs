@@ -13,35 +13,57 @@ namespace SwagLabs.PageObject
 {
     internal class LoginPage
     {
-#region drivers
+        #region drivers
         private RemoteWebDriver _driver;
 
         public LoginPage (RemoteWebDriver driver) => _driver = driver;
         #endregion
-#region Mapping
+        #region Mapping
         IWebElement inputUsername => _driver.FindElementByName("user-name");
         IWebElement inputPassword => _driver.FindElementByName("password");
         IWebElement btnLogin => _driver.FindElementByName("login-button");
         IWebElement errorsLogin => _driver.FindElementByXPath("//h3[contains(@data-test, 'error')]");
-#endregion
+        IWebElement logoPageInitial => _driver.FindElementByCssSelector(".app_logo");
+        #endregion
 
-#region Action
-        public void insertUsername()
+
+        #region Password is required
+        //Action
+        public void insertUsername(String username)
         {
-            inputUsername.SendKeys(ConfigurationManager.AppSettings["email_standard"]);
+            inputUsername.SendKeys(username);
         }
         public void clickButtonLogin()
         {
             btnLogin.Click();
         }
-#endregion
-
-#region Validation
-        public void ValidationPasswordRequired()
+        
+        // Validation
+        public void validationPasswordRequired()
         {
             Assert.That(errorsLogin.Text, Is.EqualTo("Epic sadface: Password is required"));
         }
-#endregion
+        #endregion
 
+#region Login Invalid
+        //Action
+        public void insertPassword(String password)
+        {
+            inputPassword.SendKeys(password);
+        }
+
+        //Validation
+        public void validationLoginInvalid()
+        {
+            Assert.That(errorsLogin.Text, Is.EqualTo("Epic sadface: Username and password do not match any user in this service"));
+        }
+#endregion
+#region Login Sucess
+        //Validation
+        public void validationLoginSucess()
+        {
+            Assert.True(logoPageInitial.Enabled);
+        }
+#endregion
     }
 }

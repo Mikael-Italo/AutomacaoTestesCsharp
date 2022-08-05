@@ -69,13 +69,5 @@ namespace SwagLabs
             js.ExecuteScript(script);
         }
         #endregion
-
-        #region Espera
-        public void EsperaExplicita(RemoteWebDriver driver, String Xpath)
-        {
-           // RemoteWebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            //wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(Xpath)));
-        }
-        #endregion
     }
 }
