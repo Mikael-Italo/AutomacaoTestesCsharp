@@ -21,7 +21,7 @@ namespace ST01Login
     [TestFixture]
     public class CT03LoginSemInserirSenhaTest
     {
-        private RemoteWebDriver driver;
+        private IWebDriver driver;
         public IDictionary<string, object> vars { get; private set; }
 
         [SetUp]
@@ -46,11 +46,15 @@ namespace ST01Login
         [Test]
         public void cT03LoginSemInserirSenha()
         {
-            LoginPage lg = new LoginPage(driver);
+        
+            Login lg = new Login();
 
-            lg.insertUsername();
-            lg.clickButtonLogin();
-            lg.ValidationPasswordRequired();
+            PageFactory.InitElements(driver, lg);
+
+            //Modelo de como usar variavel do app.config(Para quando usar o mesmo valor várias vezes)    
+            lg.inputUsername.SendKeys(ConfigurationManager.AppSettings["email_standard"]);
+            lg.btnLogin.Click();
+            Assert.That(lg.errorsLogin.Text, Is.EqualTo("Epic sadface: Password is required"));
         }
 
     }

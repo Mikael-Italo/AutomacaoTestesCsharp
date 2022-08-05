@@ -17,7 +17,7 @@ namespace SwagLabs
 
         #region Browser
 
-        public static RemoteWebDriver getBrowserLocal(RemoteWebDriver driver, String browser)
+        public static IWebDriver getBrowserLocal(IWebDriver driver, String browser)
         {
             switch (browser)
             {
@@ -41,7 +41,7 @@ namespace SwagLabs
         }
 
 
-        public static RemoteWebDriver getBrowserRemote(RemoteWebDriver driver)
+        public static IWebDriver getBrowserRemote(IWebDriver driver)
         {
             FirefoxOptions cap_firefox = new FirefoxOptions();
             //ChromeOptions cap_chrome = new ChromeOptions();
@@ -50,7 +50,7 @@ namespace SwagLabs
             return driver;
         }
 
-        public static RemoteWebDriver getBrowserMobile(RemoteWebDriver driver)
+        public static IWebDriver getBrowserMobile(IWebDriver driver)
         {
             DesiredCapabilities cap_android= new DesiredCapabilities();
             cap_android.SetCapability("deviceName","emulator-5554");
@@ -63,7 +63,7 @@ namespace SwagLabs
 
 
         #region JavaScript
-        public static void executeJS(RemoteWebDriver driver, String script)
+        public static void executeJS(IWebDriver driver, String script)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
             js.ExecuteScript(script);
@@ -71,10 +71,10 @@ namespace SwagLabs
         #endregion
 
         #region Espera
-        public void EsperaExplicita(RemoteWebDriver driver, String Xpath)
+        public void EsperaExplicita(IWebDriver driver, String Xpath)
         {
-           // RemoteWebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            //wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(Xpath)));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(Xpath)));
         }
         #endregion
     }

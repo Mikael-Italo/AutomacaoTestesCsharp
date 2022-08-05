@@ -71,7 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageObject\LoginPage.cs" />
+    <Compile Include="PageObject\Login.cs" />
     <Compile Include="ST01\CT01LoginComSucessoTest.cs" />
     <Compile Include="ST01\CT02LoginInvalidoTest.cs" />
     <Compile Include="ST01\CT03LoginSemInserirSenhaTest.cs" />
