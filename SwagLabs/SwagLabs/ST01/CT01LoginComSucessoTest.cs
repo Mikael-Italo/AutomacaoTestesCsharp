@@ -37,7 +37,7 @@ namespace ST01Login
         {
             LoginPage lg = new LoginPage(driver);
 
-            lg.insertUsername(ConfigurationManager.AppSettings["standard_user"]);
+            lg.insertUsername(ConfigurationManager.AppSettings["email_standard"]);
             lg.insertPassword(ConfigurationManager.AppSettings["password"]);
             lg.clickButtonLogin();
             lg.validationLoginSucess();
