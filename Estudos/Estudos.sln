@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwagLabs", "SwagLabs\SwagLabs.csproj", "{D3C07179-313A-4BAD-9A7E-9B628F7FAE56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudos", "Estudos\Estudos.csproj", "{05694548-5F82-4906-AF2F-A83A5F41CA5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3C07179-313A-4BAD-9A7E-9B628F7FAE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3C07179-313A-4BAD-9A7E-9B628F7FAE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3C07179-313A-4BAD-9A7E-9B628F7FAE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3C07179-313A-4BAD-9A7E-9B628F7FAE56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05694548-5F82-4906-AF2F-A83A5F41CA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05694548-5F82-4906-AF2F-A83A5F41CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05694548-5F82-4906-AF2F-A83A5F41CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05694548-5F82-4906-AF2F-A83A5F41CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {837BD3BD-4BFF-4EDA-8E79-AB3CCB398E1D}
+		SolutionGuid = {2BAF1515-73B9-4424-9AEE-52E07FD72F99}
 	EndGlobalSection
 EndGlobal

@@ -18,6 +18,7 @@ namespace SwagLabs.PageObject
 
         public LoginPage (RemoteWebDriver driver) => _driver = driver;
         #endregion
+
         #region Mapping
         IWebElement inputUsername => _driver.FindElementByName("user-name");
         IWebElement inputPassword => _driver.FindElementByName("password");
