@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace SwagLabsWithSpecFlow.PageObjects
+﻿namespace SwagLabsWithSpecFlow.PageObjects
 {
     public class BasePage
     {

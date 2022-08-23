@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace SwagLabsWithSpecFlow.StepDefinitions
+﻿namespace SwagLabsWithSpecFlow.StepDefinitions
 {
     [Binding]
     public class Hooks

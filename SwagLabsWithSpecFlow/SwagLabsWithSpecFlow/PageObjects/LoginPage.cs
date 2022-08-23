@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace SwagLabsWithSpecFlow.PageObjects
+﻿namespace SwagLabsWithSpecFlow.PageObjects
 {
     internal class LoginPage
     {
@@ -20,7 +18,7 @@ namespace SwagLabsWithSpecFlow.PageObjects
         public void sendPassword(String password) => inputPassword.SendKeys(password);
 
         public void clickLogin() => btnLogin.Click();
-        //Validção
+        //Validação
 
         public void validationLoginSucess() => divAppLogo.Displayed.Should().BeTrue();
     }
