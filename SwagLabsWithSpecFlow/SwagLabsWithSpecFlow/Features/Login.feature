@@ -2,7 +2,8 @@
 
 
 @LoginComSuceso
-Scenario: Realizar com sucesso o Login 
+Scenario: Login_com_sucesso 
+![LoginComSucesso](../TestResultsLivingDoc/Screen/Login_com_sucesso.png)
 	Given que o usuario esteja na pagina de login
 	And inserir o usuario como "standard_user"
 	And inserir a senha como "secret_sauce"

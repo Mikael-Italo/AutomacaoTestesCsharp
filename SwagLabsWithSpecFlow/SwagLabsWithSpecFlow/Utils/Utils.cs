@@ -1,8 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-
-namespace SwagLabsWithSpecFlow.Utils
+﻿namespace SwagLabsWithSpecFlow.Utils
 {
     public class Utils
     {
@@ -32,6 +28,16 @@ namespace SwagLabsWithSpecFlow.Utils
         {
             WebDriverWait wait = new WebDriverWait(driver!, TimeSpan.FromSeconds(10));
             wait.Until((d) => d.FindElement(By.XPath(xpathElement)) != null);
+        }
+
+        public static void print(String title)
+        {
+            ((ITakesScreenshot)driver!).GetScreenshot().SaveAsFile(@"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\Screen\" + title + ".png", ScreenshotImageFormat.Png);
+        }
+
+        public static void gerarRelatorio()
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\comando.bat");
         }
         #endregion
     }
