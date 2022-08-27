@@ -4,7 +4,7 @@ namespace SwagLabsWithSpecFlow.StepDefinitions
     public class LoginStepDefinitions
     {
         private LoginPage? lp;
-
+//Login_com_sucesso
         [Given(@"que o usuario esteja na pagina de login")]
         public void GivenQueOUsuarioEstejaNaPaginaDeLogin()
         {
@@ -34,5 +34,13 @@ namespace SwagLabsWithSpecFlow.StepDefinitions
         {
             lp!.validationLoginSucess();
         }
+
+//Login invalido
+        [Then(@"deve-se exibir a mensagem informando Login Invalido")]
+        public void ThenDeve_SeExibirAMensagemInformandoLoginInvalido()
+        {
+            lp!.validationLoginInvalid();
+        }
+
     }
 }

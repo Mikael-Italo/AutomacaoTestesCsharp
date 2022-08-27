@@ -10,6 +10,7 @@
         protected IWebElement inputPassword => driver.FindElement(By.XPath("//input[contains(@id,'password')]"));
         protected IWebElement btnLogin => driver.FindElement(By.XPath("//input[contains(@id,'login-button')]"));
         protected IWebElement divAppLogo => driver.FindElement(By.XPath("//div[contains(@class,'app_logo')]"));
+        protected IWebElement h3error => driver.FindElement(By.XPath("//h3[contains(@data-test,'error')]"));
 
 
         //Ação
@@ -21,5 +22,7 @@
         //Validação
 
         public void validationLoginSucess() => divAppLogo.Displayed.Should().BeTrue();
+
+        public void validationLoginInvalid() => h3error.Text.Equals("Epic sadface: Username and password do not match any user in this service").Should().BeTrue();
     }
 }

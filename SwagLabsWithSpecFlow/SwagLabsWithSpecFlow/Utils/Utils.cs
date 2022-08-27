@@ -32,7 +32,10 @@
 
         public static void print(String title)
         {
-            ((ITakesScreenshot)driver!).GetScreenshot().SaveAsFile(@"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\Screen\" + title + ".png", ScreenshotImageFormat.Png);
+            ((ITakesScreenshot)driver!).
+                GetScreenshot().
+                SaveAsFile(@"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\Screen\" + title + ".png",
+                ScreenshotImageFormat.Png);
         }
 
         public static void gerarRelatorio()
