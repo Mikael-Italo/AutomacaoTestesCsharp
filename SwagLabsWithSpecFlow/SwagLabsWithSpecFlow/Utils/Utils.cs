@@ -1,4 +1,4 @@
-﻿namespace SwagLabsWithSpecFlow.Utils
+﻿namespace SwagLabsWithSpecFlow
 {
     public class Utils
     {
@@ -24,10 +24,11 @@
         #endregion
 
         #region Metodos Utils
-        public static void waitElement(String xpathElement)
+        public static WebDriverWait wait(int segundos)
         {
-            WebDriverWait wait = new WebDriverWait(driver!, TimeSpan.FromSeconds(10));
-            wait.Until((d) => d.FindElement(By.XPath(xpathElement)) != null);
+            WebDriverWait wait = new WebDriverWait(driver!, TimeSpan.FromSeconds(segundos));
+            return wait;
+            //wait.Until((d) => d.FindElement(By.XPath(xpathElement)) != null);
         }
 
         public static void print(String title)
@@ -40,7 +41,8 @@
 
         public static void gerarRelatorio()
         {
-            System.Diagnostics.Process.Start(@"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\comando.bat");
+            System.Diagnostics.Process.Start(
+                @"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\comando.bat");
         }
         #endregion
     }

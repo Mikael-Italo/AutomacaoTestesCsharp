@@ -1,4 +1,4 @@
-﻿namespace SwagLabsWithSpecFlow.StepDefinitions
+﻿namespace SwagLabsWithSpecFlow
 {
     [Binding]
     public class Hooks
@@ -13,16 +13,16 @@
         [BeforeScenario]
         public void setUp()
         {
-            Utils.Utils.loadPage();
+            Utils.loadPage();
         }
 
         [AfterScenario]
         [Obsolete]
         public void tearDown()
         {
-            Utils.Utils.print(_scenarioContext.ScenarioInfo.Title);
-            Utils.Utils.gerarRelatorio();
-            Utils.Utils.close();
+            Utils.print(_scenarioContext.ScenarioInfo.Title);
+            Utils.gerarRelatorio();
+            Utils.close();
         }
     }
 }

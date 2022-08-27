@@ -1,14 +1,16 @@
-namespace SwagLabsWithSpecFlow.StepDefinitions
+namespace SwagLabsWithSpecFlow
 {
     [Binding]
-    public class LoginStepDefinitions
+    public class LoginStepDefinitions : Utils
     {
         private LoginPage? lp;
+
 //Login_com_sucesso
         [Given(@"que o usuario esteja na pagina de login")]
         public void GivenQueOUsuarioEstejaNaPaginaDeLogin()
         {
-            lp = new LoginPage();
+            lp = new LoginPage(driver!);
+            wait(3);
         }
 
         [Given(@"inserir o usuario como ""([^""]*)""")]
