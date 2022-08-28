@@ -1,7 +1,7 @@
 namespace SwagLabsWithSpecFlow
 {
     [Binding]
-    public class LoginStepDefinitions : Utils
+    public class LoginStepDefinitions
     {
         private LoginPage? lp;
 
@@ -9,8 +9,8 @@ namespace SwagLabsWithSpecFlow
         [Given(@"que o usuario esteja na pagina de login")]
         public void GivenQueOUsuarioEstejaNaPaginaDeLogin()
         {
-            lp = new LoginPage(driver!);
-            wait(3);
+            lp = new LoginPage(Utils.driver!);
+            Utils.wait(3);
         }
 
         [Given(@"inserir o usuario como ""([^""]*)""")]

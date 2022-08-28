@@ -1,7 +1,7 @@
 ﻿namespace SwagLabsWithSpecFlow
 {
     [Binding]
-    public class Hooks
+    public class Hooks : Utils
     {
         private ScenarioContext _scenarioContext;
 
@@ -13,16 +13,16 @@
         [BeforeScenario]
         public void setUp()
         {
-            Utils.loadPage();
+            loadPage();
         }
 
         [AfterScenario]
         [Obsolete]
         public void tearDown()
         {
-            Utils.print(_scenarioContext.ScenarioInfo.Title);
-            Utils.gerarRelatorio();
-            Utils.close();
+            print(_scenarioContext.ScenarioInfo.Title);
+            gerarRelatorio();
+            close();
         }
     }
 }

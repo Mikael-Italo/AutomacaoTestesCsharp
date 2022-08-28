@@ -10,6 +10,7 @@ Scenario: Login_com_sucesso
 	When clicar no botao login
 	Then o usuario acessa a tela inicial do site
 
+
 @LoginInvalido
 Scenario: Login_Invalido
 ![LoginInvalido](../TestResultsLivingDoc/Screen/Login_Invalido.png)
