@@ -44,6 +44,15 @@
             System.Diagnostics.Process.Start(
                 @"C:\Users\SSD DESKTOP\Documents\Visual Studio 2022\Projects\SwagLabsWithSpecFlow\SwagLabsWithSpecFlow\TestResultsLivingDoc\comando.bat");
         }
+
+        //private T Na<T>() where T : new()
+        //{
+          //  var page = (T)Activator.CreateInstance(typeof(T));
+           // PageFactory.InitElements(driver, page);
+            //return page;
+        //}
+
+
         #endregion
     }
 }
